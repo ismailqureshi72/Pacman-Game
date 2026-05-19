@@ -5,7 +5,10 @@ A classic Pacman game implementation in C++ using the **SFML** (Simple and Fast 
 ## 🎮 Features
 - **Classic Gameplay**: Navigate the maze, eat dots, and avoid enemies.
 - **Multiple Game States**: Includes Menu, Play, Pause, Color Change, and Exit screens.
-- **Object-Oriented Design**: Clean class structures for `player`, `enemies`, `maze`, and `movement`.
+- **Object-Oriented Design**: The project heavily relies on OOP paradigms:
+  - **Encapsulation**: Game elements like `Maze`, `Ghost`, `Menu`, `ScoreManager`, and `Gameloop` are encapsulated into classes with their own properties and methods.
+  - **Inheritance**: Used extensively to create hierarchical relationships. For example, `player` inherits from `movement`, specific ghosts (`Blinky`, `Pinky`, `Inky`) inherit from a base `Ghost` class, and `Pellet` and `PowerPellet` inherit from a base `Food` class.
+  - **Polymorphism**: Allows interchangeable behavior among derived objects, making the game logic extensible (e.g., handling different ghost AI movements via a common interface).
 - **Audio & Visuals**: Utilizes `.ogg` audio files and custom fonts/graphics using SFML.
 
 ## 🛠️ Technologies Used
